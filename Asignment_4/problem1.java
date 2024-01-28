@@ -6,17 +6,24 @@ public class problem1 {
     static int n;
 
     public static void pos() {
-        int a[] = new int[n];
-        for (int i = n - 1; i >= 0; i--) {
-            a[i] = n - i - 1; // Populate the array with values 0, 1, 2, ..., n-1
-            System.out.print(a[i] + " ");
+       for(int i=n-1;i>=0;i--){
+            System.out.println(i);
+       }
+    }
+    public static void neg(){
+        for(int i=n;i<=0;i++){
+            System.out.println(i);
         }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        pos();
+        if(n==0){
+            System.out.println("already Zero");
+        }else if(n>0){
+            pos();
+        }else neg();
     }
     
 
