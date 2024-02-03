@@ -1,8 +1,9 @@
 package Asignment_4;
 
 import java.util.Scanner;
+
 public class problem5 {
-   
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -21,8 +22,7 @@ public class problem5 {
         int result = a;
         for (int j = 0; j < n; j++) {
             result += Math.pow(2, j) * b;
-            System.out.print(result+" ");
+            System.out.print(result + " ");
         }
     }
 }
-
