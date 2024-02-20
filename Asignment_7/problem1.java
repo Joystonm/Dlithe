@@ -2,15 +2,32 @@ package Asignment_7;
 
 public class problem1 {
     static void sort012(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] > arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
+        int low = 0;
+        int mid = 0;
+        int high = arr.length - 1;
+
+        while (mid <= high) {
+            switch (arr[mid]) {
+                case 0:
+                    swap(arr, low, mid);
+                    low++;
+                    mid++;
+                    break;
+                case 1:
+                    mid++;
+                    break;
+                case 2:
+                    swap(arr, mid, high);
+                    high--;
+                    break;
             }
         }
+    }
+
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void main(String[] args) {
@@ -21,12 +38,11 @@ public class problem1 {
         sort012(arr);
         sort012(arr1);
         for (int x : arr) {
-            System.out.print(x);
+            System.out.print(x + " ");
         }
         System.out.println();
         for (int x : arr1) {
-            System.out.print(x);
+            System.out.print(x + " ");
         }
-
     }
 }
