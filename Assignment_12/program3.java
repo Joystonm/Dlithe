@@ -3,14 +3,7 @@ import java.util.*;
 public class program3 {
 
   public static void findMajorityElement(int[] arr) {
-    for (int i = 0; i < arr.length; i++) {
-        // System.out.print(arr[i]);
-
-        // if (i != arr.length - 1) {
-        //     System.out.print(",");
-        // }
-    }
-    
+   
     int candidate1 = Integer.MIN_VALUE, candidate2 = Integer.MIN_VALUE;
     int count1 = 0, count2 = 0;
 
@@ -53,7 +46,7 @@ public class program3 {
 }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3};
+        int[] nums = {1,2,3,2,3,1,1};
         findMajorityElement(nums);
     }
   }
